@@ -16,11 +16,11 @@ app.get('/', (req, res) => {
   res.json({ message: "Welcome to the URL Shortener API" });
 });
 
-app.use(urlRouter)
+
 
 app.use('/user', userRouter);
 
-
+app.use(urlRouter)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
